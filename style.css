@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Sans+3:wght@400;500;600&display=swap');
+
+:root { --wine:#7e2341; --rose:#cb6c83; --cream:#fff9f4; --ink:#311d26; --sand:#f4e5db; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--cream); color:var(--ink); font-family:"Source Sans 3", Arial, sans-serif; font-size:18px; line-height:1.6; }
+img { display:block; width:100%; height:100%; object-fit:cover; }
+.hero { min-height:100svh; position:relative; display:grid; place-items:center; overflow:hidden; color:white; }
+.hero-photo { position:absolute; inset:0; background:linear-gradient(90deg,rgba(40,10,20,.58),rgba(40,10,20,.12)),url("images/foto-09.jpeg") center 22% / cover; transform:scale(1.02); }
+.hero::after { content:""; position:absolute; inset:0; background:linear-gradient(0deg,rgba(38,8,19,.6),transparent 52%); }
+.hero-glow { width:55vw; height:55vw; max-width:700px; max-height:700px; position:absolute; border:1px solid rgba(255,255,255,.3); border-radius:50%; }
+.hero-copy { position:relative; z-index:1; width:min(1080px,88vw); padding:10vh 0 9vh; align-self:end; }
+.eyebrow,.chapter { font:500 11px/1.5 "DM Mono",monospace; text-transform:uppercase; letter-spacing:.13em; }
+.eyebrow { margin:0 0 14px; opacity:.92; }
+h1,h2,p { margin-top:0; }
+h1,h2 { font-family:"Playfair Display", Georgia, serif; font-weight:600; line-height:.98; letter-spacing:-.045em; }
+h1 { margin:0; font-size:clamp(60px,11vw,146px); }
+h1 em { color:#ffd3da; }
+.hero-message { max-width:390px; font-size:clamp(19px,2vw,25px); margin:27px 0 42px; }
+.scroll-hint { font:10px "DM Mono",monospace; text-transform:uppercase; letter-spacing:.1em; }
+.story-section { width:min(960px,86vw); margin:0 auto; padding:150px 0; }
+.chapter { color:var(--wine); margin-bottom:24px; }
+h2 { font-size:clamp(44px,7vw,88px); margin-bottom:31px; }
+.story-section > p:not(.chapter), .together p, .family p, .letter p { max-width:620px; }
+.opening { display:grid; grid-template-columns:1fr .75fr; gap:70px; align-items:end; }
+.opening h2,.opening > p:not(.chapter) { grid-column:1; }
+.opening .chapter { grid-column:1 / -1; margin-bottom:-35px; }
+.polaroid { grid-column:2; grid-row:2 / 4; background:white; padding:14px 14px 50px; box-shadow:0 22px 45px rgba(76,33,44,.16); }
+.polaroid img { aspect-ratio:.75; }
+.tilt-left { transform:rotate(4deg); }
+.together { background:var(--wine); color:#fff8f3; padding:150px max(7vw,30px); display:grid; grid-template-columns:.7fr 1fr .58fr; gap:clamp(25px,6vw,90px); align-items:center; }
+.together .chapter { color:#ffd3da; }.together h2 { font-size:clamp(39px,5vw,68px); }.together-copy { max-width:470px; }
+.image-frame { overflow:hidden; box-shadow:0 20px 40px rgba(45,12,23,.2); }.image-tall { height:480px; }.image-small { height:300px; align-self:end; }
+.heart { color:#ffcbd5; font-size:34px; }
+.quote-section { padding:115px 10vw; text-align:center; background:#f8dfe0; color:var(--wine); }
+.quote-section p { font:italic 600 clamp(35px,6vw,78px)/1.08 "Playfair Display",Georgia,serif; max-width:1000px; margin:auto; }
+.argentina { display:grid; grid-template-columns:1fr 1.1fr; gap:7vw; align-items:center; }
+.snow-photos { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; align-items:start; }.snow-photos figure { margin:0; overflow:hidden; background:white; padding:8px; box-shadow:0 13px 30px rgba(76,33,44,.12); }.snow-photos img { aspect-ratio:.93; }.snow-caption { grid-column:1 / -1; margin:0; color:var(--wine); font:10px "DM Mono",monospace; letter-spacing:.08em; text-transform:uppercase; }.snow-photos figure:first-child { grid-column:auto; }.snow-photos figure:nth-child(2) { width:auto; position:static; padding:8px; box-shadow:0 13px 30px rgba(76,33,44,.12); }.snow-photos figure:nth-child(2) img { aspect-ratio:.93; }.snow-lake { width:auto; margin:0; }.snow-lake img { aspect-ratio:.93; }.snow-dog { width:auto; height:205px; position:relative; border:0; }.snow-dog img { width:205px; height:100%; max-width:none; aspect-ratio:auto; transform:rotate(-90deg) translateX(-100%); transform-origin:top left; object-fit:cover; }
+.family { padding:135px max(7vw,30px); background:#ead3c3; display:grid; grid-template-columns:.8fr 1fr; gap:clamp(38px,9vw,150px); align-items:center; }.family .image-frame { height:580px; }
+.gallery { width:min(1200px,88vw); margin:135px auto; display:grid; grid-template-columns:1fr .8fr 1fr; gap:20px; align-items:center; }.gallery img { aspect-ratio:.74; }.gallery img:nth-child(2) { aspect-ratio:.68; transform:translateY(45px); }
+.letter { width:min(720px,86vw); margin:160px auto 120px; text-align:center; }.letter h2 { margin-bottom:35px; }.letter p { margin-left:auto; margin-right:auto; }.letter .signature { margin-top:44px; color:var(--wine); font:italic 600 clamp(26px,4vw,42px)/1.2 "Playfair Display",Georgia,serif; }
+footer { text-align:center; background:var(--wine); color:#f8dfe0; padding:26px 15px; font:10px "DM Mono",monospace; text-transform:uppercase; letter-spacing:.12em; }
+@media (max-width:700px) { body { font-size:18px; line-height:1.65; }.hero { min-height:100svh; }.hero-photo { background-position:center 18%; }.hero-copy { padding-bottom:8vh; }.hero-message { font-size:21px; max-width:310px; }.opening,.argentina,.family { display:block; }.opening .chapter { margin-bottom:24px; }.polaroid { width:74%; margin:55px 0 0 auto; }.story-section { padding:95px 0; }.together { padding:90px 7vw; grid-template-columns:1fr; }.image-tall { height:390px; width:75%; }.image-small { width:65%; height:230px; margin:-95px 0 0 auto; }.together-copy { margin-top:45px; }.argentina-copy { margin-bottom:50px; }.snow-photos { gap:12px; }.snow-dog { height:150px; }.snow-dog img { width:150px; }.family .image-frame { height:460px; margin-bottom:50px; }.gallery { margin:85px auto; gap:9px; }.gallery img:nth-child(2) { transform:translateY(25px); }.letter { margin:110px auto 85px; } }
+@media (max-width:390px) { h1 { font-size:64px; }.hero-message { font-size:19px; }.hero-copy { width:86vw; } }
